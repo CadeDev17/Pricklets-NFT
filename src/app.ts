@@ -1,8 +1,13 @@
 import ProtonWebSDK from '@proton/web-sdk'
+import {JsonRpc, Api, JsSignatureProvider} from '@proton/js'
+import fetch from 'node-fetch'
+const ENDPOINT = "https://proton.greymass.com"
+let link: any = undefined
+let session: any = undefined
 
-let link: any = undefined;
-let session: any = undefined;
-
+const accountId = 'decryptr'
+const tokenContractName = 'grat'
+const tokenName = 'GRAT'
 const appIdentifier = "taskly"
 const chainId = "384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0"
 const endpoints = ["https://proton.greymass.com"]
@@ -16,6 +21,22 @@ const logoutIcon = document.querySelector('#logout') as HTMLElement
 // const toInput = document.querySelector('#to-input') as HTMLElement
 // const amountInput = document.querySelector('#amount-input') as HTMLElement
 // const transferButton = document.querySelector('#transfer-button') as HTMLElement
+
+const rpc = new JsonRpc([ENDPOINT], { fetch: fetch })
+
+const getBalance = async ({
+    account,
+    tokenContract,
+    tokenSymbol
+}) => {
+    const [balance] = await rpc.get_currency_balance(tokenContract, account, tokenSymbol)
+
+    if (balance) {
+        return Number(balance.split(' ')[0])
+    } else {
+        return 0
+    }
+}
 
 const updateStatus = () => {
 
@@ -119,7 +140,7 @@ const logout = async () => {
 
 // Add button listeners
 logoutIcon.addEventListener('click', () => logout())
-loginButton.addEventListener("click", () => login(true))
+loginButton.addEventListener("click", () => login(false))
 // transferButton.addEventListener("click", () => transfer({
 // to: toInput.value,
 // amount: amountInput.value,

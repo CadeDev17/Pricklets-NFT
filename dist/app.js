@@ -115,7 +115,7 @@ const logout = () => __awaiter(void 0, void 0, void 0, function* () {
 // }
 // Add button listeners
 logoutIcon.addEventListener('click', () => logout());
-loginButton.addEventListener("click", () => login(true));
+loginButton.addEventListener("click", () => login(false));
 // transferButton.addEventListener("click", () => transfer({
 // to: toInput.value,
 // amount: amountInput.value,
