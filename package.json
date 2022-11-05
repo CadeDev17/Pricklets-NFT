@@ -1,0 +1,26 @@
+{
+  "name": "proton-web-sdk-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@proton/js": "^27.3.0",
+    "@proton/web-sdk": "^4.2.7",
+    "node-fetch": "^3.2.10",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Decryptr22/pricklets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Decryptr22/pricklets/issues"
+  },
+  "homepage": "https://github.com/Decryptr22/pricklets#readme"
+}
