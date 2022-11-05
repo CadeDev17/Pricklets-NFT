@@ -22,21 +22,21 @@ const logoutIcon = document.querySelector('#logout') as HTMLElement
 // const amountInput = document.querySelector('#amount-input') as HTMLElement
 // const transferButton = document.querySelector('#transfer-button') as HTMLElement
 
-const rpc = new JsonRpc([ENDPOINT], { fetch: fetch })
+// const rpc = new JsonRpc([ENDPOINT], { fetch: fetch })
 
-const getBalance = async ({
-    account,
-    tokenContract,
-    tokenSymbol
-}) => {
-    const [balance] = await rpc.get_currency_balance(tokenContract, account, tokenSymbol)
+// const getBalance = async ({
+//     account,
+//     tokenContract,
+//     tokenSymbol
+// }) => {
+//     const [balance] = await rpc.get_currency_balance(tokenContract, account, tokenSymbol)
 
-    if (balance) {
-        return Number(balance.split(' ')[0])
-    } else {
-        return 0
-    }
-}
+//     if (balance) {
+//         return Number(balance.split(' ')[0])
+//     } else {
+//         return 0
+//     }
+// }
 
 const updateStatus = () => {
 
