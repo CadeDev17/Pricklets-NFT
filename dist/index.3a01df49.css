@@ -3,29 +3,30 @@
   font-family: Rancho, cursive;
 }
 
+body main {
+  padding-top: 100px;
+}
+
 #wrapper {
   width: 100%;
   margin: 0 auto;
 }
 
 nav {
-  background: "#ffffff";
   height: 100px;
   width: 100%;
+  background: #fff;
   border-bottom: 5px solid #f2f2f2;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2.2rem;
   line-height: 50px;
+  display: flex;
   position: relative;
 }
 
 .fixed {
   position: fixed;
-}
-
-.navbar {
-  justify-content: space-between;
-  align-items: center;
-  font-size: 2.2rem;
-  display: flex;
 }
 
 .logo {
@@ -56,6 +57,16 @@ nav {
 .user-container a:hover, .user-container i:hover {
   color: #52ab98;
   cursor: pointer;
+}
+
+#home-container {
+  height: 89vh;
+  width: 100vw;
+  align-items: left;
+  border: 2px solid red;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.3a01df49.css.map */

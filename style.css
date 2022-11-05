@@ -3,6 +3,10 @@
     font-family: 'Rancho', cursive;
 }
 
+body main {
+    padding-top:100px;
+}
+
 /* 
 const darkGreen = #2b6777 | Block
 const lightBlue = #c8d8e4 | Accent
@@ -17,23 +21,20 @@ const lightGreen = #52ab98 | Hovers and Buttons
 }
 
 nav {
-    background: '#ffffff';
+    background: #ffffff;
     height: 100px;
     width: 100%;
     line-height:50px;
     position: relative;
     border-bottom: 5px solid #f2f2f2;
-}
-
-.fixed {
-    position:fixed;
-}
-
-.navbar {
     font-size: 2.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.fixed {
+    position:fixed;
 }
 
 .logo {
@@ -66,4 +67,16 @@ nav {
 .user-container i:hover {
     color: #52ab98;
     cursor: pointer;
+}
+
+/* HOME SECTION */
+
+#home-container {
+    border: 2px solid red;
+    height: 89vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 }
