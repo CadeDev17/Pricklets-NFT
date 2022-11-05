@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    font-family: 'Rancho', cursive;
+}
+
+/* 
+const darkGreen = #2b6777 | Block
+const lightBlue = #c8d8e4 | Accent
+const lightWhite = #ffffff | Main Background
+const lightGray = #f2f2f2 | Content Holder, Bubble
+const lightGreen = #52ab98 | Hovers and Buttons
+*/
+
+#wrapper {
+    width:100%;
+    margin: 0 auto;
+}
+
+nav {
+    background: '#ffffff';
+    height: 100px;
+    width: 100%;
+    line-height:50px;
+    position: relative;
+    border-bottom: 2px solid red;
+}
+
+.fixed {
+    position:fixed;
+}
+
+.navbar {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    border-radius: 30px;
+}
+
+.logo-name{
+    border: 2px solid red;
+    padding-bottom: 30px;
+}
+
+
+.user-container {
+    width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.user-container #avatar-image {
+    width: 50px;
+}

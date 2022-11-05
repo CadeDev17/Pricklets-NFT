@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Pricklets</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Required for proton -->
+    <script src="https://unpkg.com/@proton/web-sdk@4.1.4"></script>
+  </head>
+
+  <body>
+    <div id="wrapper">
+        <nav class="navbar">
+          <div class="user-container">
+            <img class="logo" src="./images/prickletfarmer.png" alt="pricklet farmer">
+            <span>Pricklets</span>
+          </div>
+          <div>
+            <div id="login-button">Login</div>
+        
+            <div id="avatar"></div>
+            <div class="user-container">
+              <img id="avatar-image" src="https://bloks.io/img/proton_avatar.png" alt="Profile Photo"/>
+              <span id="avatar-name"></span>
+              <i id="logout" class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
+            </div>
+          </div>
+        </nav>
+    </div>
+
+    <!-- <div>
+        <div>
+          <label for="email" >From</label>
+          <div>
+            <input
+              id="from-input"
+              disabled="true"
+              placeholder="Please login"
+            />
+          </div>
+        </div>
+  
+        <div>
+          <label for="email">To</label>
+          <div>
+            <input
+              id="to-input"
+              type="text"
+              name="to"
+              placeholder="e.g. token.burn"
+            >
+          </input>
+          </div>
+        </div>
+        <div>
+          <label for="email" >Amount</label>
+          <div>
+            <input
+              id="amount-input"
+              type="text"
+              name="amount"
+              placeholder="e.g. 1.3"
+            >
+            </input>
+          </div>
+        </div>
+  
+        <div>
+          <div id="transfer-button">
+            Transfer
+          </div>
+        </div>
+    </div> -->
+
+    <script type="module" src="/dist/app.js"></script>
+  </body>
+</html>
