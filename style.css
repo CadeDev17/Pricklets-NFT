@@ -42,6 +42,10 @@ nav {
     border-radius: 30px;
 }
 
+#login-button {
+    cursor: pointer;
+}
+
 .user-container span{
     margin-left: 15px;
 }
@@ -90,7 +94,8 @@ nav {
 
 .btn:hover {
     cursor: pointer;
-    color: #f2f2f2
+    color: #f2f2f2;
+    background-color:#2b6777;
 }
 
 .egg {
@@ -158,11 +163,11 @@ nav {
     margin-left: 3rem;
 }
 
-.image-content {
+#image-content {
     width: 50%;
     height: 90vh;
 }
-.image-content img {
+#image-content #img {
     height: 89vh;
     width: 100%
 }
@@ -178,6 +183,7 @@ nav {
 #mint-style h2 {
     width: fit-content;
     margin: 0 auto;
+    padding-top: 15px;
     font-size: 4rem;
     font-family: 'Rye', cursive;
     border-bottom: 3px solid #52ab98;
@@ -267,7 +273,7 @@ nav {
     border-radius: 30px;
     top:230%;
     right: 15%;
-    transform: rotate(45deg);
+    transform: rotate(37deg);
     box-shadow: -2px 3px 5px #52ab98;
 }
 
@@ -276,7 +282,7 @@ nav {
     width: 200px;
     border-radius: 50%;
     top:220%;
-    right: 85%;
+    right: 75%;
     transform: rotate(25deg);
     box-shadow: -2px 3px 5px #52ab98;
 }
@@ -328,3 +334,90 @@ nav {
     font-family: 'Rye', cursive;
     color: #52ab98;
 }
+
+
+/* TEAM SECTION */
+
+#team {
+    height: 700px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.me-img {
+    width: 200px;
+    border-radius: 25%;
+    padding-top: 20px;
+}
+
+.me-container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #52ab98; */
+    border-radius: 10px;
+    height: fit-content;
+    text-align: center;
+}
+
+.me-container h2 {
+    font-size: 2.5rem;
+}
+
+.me-container span {
+    font-size: 1rem;
+    color: #2b6777
+}
+
+.me-container span,
+.me-container h2,
+.me-container p {
+    margin: 5px 20px;
+}
+
+.me-container p {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.you-img {
+    width: 275px;
+    border-radius: 25%;
+    padding-top: 20px;
+}
+
+/* FOOTER SECTION */
+
+#footer {
+    border-top: 2px solid #52ab98;
+    background-color: #2b6777;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#footer div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 5rem;
+    font-family: 'Rye', cursive;
+    margin: auto 0;
+}
+
+#footer div h2,
+#footer div span{
+    font-family: 'Rye', cursive;
+}
+
+#footer div span {
+    color: #52ab98
+}
+
+
+

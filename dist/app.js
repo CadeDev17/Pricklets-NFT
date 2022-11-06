@@ -21,8 +21,8 @@ const tokenSymbol = 'XPR';
 const appIdentifier = "taskly";
 const chainId = "384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0";
 const endpoints = ["https://api.protonnz.com"];
-const images = ["../images/prickletfarmer.png", "../images/UnCommon.png", "../images/Epic.png"];
-const imgCarousel = document.querySelector('#img-carousel');
+const images = ['/MartialArts!.0bd9e1df.png', '/prickletfarmer.67526240.png', '/SleepingZombie.996fbeca.png', '/Vandal.e2c4911b.png'];
+const img = document.querySelector('#img');
 const imgCarouselBtn = document.querySelector('#next');
 const imgContent = document.querySelector('#image-content');
 const welcomeMessage = document.querySelector('#welcome-message');
@@ -35,12 +35,17 @@ const logoutIcon = document.querySelector('#logout');
 // const toInput = document.querySelector('#to-input') as HTMLElement
 // const amountInput = document.querySelector('#amount-input') as HTMLElement
 // const transferButton = document.querySelector('#transfer-button') as HTMLElement
-let randInt = Math.floor(Math.random() * images.length) + 1;
-let randImg = images[randInt];
+// if images length is equal to the current count, current count goes back to 0
+// on click count will increment one, starting at the first index of images array 0
+let count = 1;
 imgCarouselBtn.addEventListener('click', event => {
-    imgContent.innerHTML = `
-        <img id="img-carousel" src=${randImg} alt="Pricklet Farmer"/>
-    `;
+    count++;
+    if (count === images.length) {
+        count = 0;
+    }
+    console.log(img);
+    img.src = images[count];
+    console.log(img);
 });
 const getBalance = (params) => __awaiter(void 0, void 0, void 0, function* () {
     if (!activeSession)
@@ -61,7 +66,7 @@ const updateStatus = () => __awaiter(void 0, void 0, void 0, function* () {
         }).catch(err => console.log(err));
         avatarName.textContent = `${activeSession.auth.actor.toString()} (${balance} ${tokenSymbol})`;
         avatarName.style.fontSize = "1.5rem";
-        welcomeMessage.textContent = `Hey${' ' + activeSession.auth.actor.toString() || ''}, welcome to PrickTopia`;
+        welcomeMessage.textContent = `Hey ${activeSession.auth.actor.toString()}, welcome to PrickTopia!`;
         // fromInput.value = activeSession.auth.actor.toString()
         loginButton.style.display = "none";
         avatar.style.display = "block";
@@ -70,6 +75,7 @@ const updateStatus = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     else {
         avatarName.textContent = "";
+        welcomeMessage.textContent = 'Hey, welcome to PrickTopia!';
         // fromInput.value = ""
         loginButton.style.display = "block";
         avatar.style.display = "none";
