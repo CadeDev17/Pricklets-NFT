@@ -1,17 +1,22 @@
-import ProtonWebSDK from '@proton/web-sdk'
-import {JsonRpc, Api, JsSignatureProvider} from '@proton/js'
-import fetch from 'node-fetch'
-const ENDPOINT = "https://proton.greymass.com"
-let link: any = undefined
-let session: any = undefined
+import ProtonWebSDK, { Link, LinkSession, ProtonWebLink } from '@proton/web-sdk'
 
-const accountId = 'decryptr'
-const tokenContractName = 'grat'
-const tokenName = 'GRAT'
+
+
+let activeLink: ProtonWebLink | Link | void
+let activeSession: LinkSession | void
+
+const account = 'decryptr'
+const tokenContract = 'eosio.token'
+const tokenSymbol = 'XPR'
 const appIdentifier = "taskly"
 const chainId = "384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0"
-const endpoints = ["https://proton.greymass.com"]
+const endpoints = ["https://api.protonnz.com"]
+const images = ["../images/prickletfarmer.png", "../images/UnCommon.png", "../images/Epic.png"]
 
+const imgCarousel = document.querySelector('#img-carousel') as HTMLImageElement
+const imgCarouselBtn = document.querySelector('#next') as HTMLButtonElement
+const imgContent = document.querySelector('#image-content') as HTMLDivElement
+const welcomeMessage = document.querySelector('#welcome-message') as HTMLBaseElement
 const loginButton = document.querySelector('#login-button') as HTMLButtonElement
 const avatar = document.querySelector('#avatar') as HTMLDivElement
 const avatarName = document.querySelector('#avatar-name') as HTMLSpanElement
@@ -21,28 +26,45 @@ const logoutIcon = document.querySelector('#logout') as HTMLElement
 // const toInput = document.querySelector('#to-input') as HTMLElement
 // const amountInput = document.querySelector('#amount-input') as HTMLElement
 // const transferButton = document.querySelector('#transfer-button') as HTMLElement
+let randInt = Math.floor(Math.random()*images.length) + 1
+let randImg = images[randInt]
 
-// const rpc = new JsonRpc([ENDPOINT], { fetch: fetch })
+imgCarouselBtn.addEventListener('click', event => {
+    imgContent.innerHTML = `
+        <img id="img-carousel" src=${randImg} alt="Pricklet Farmer"/>
+    `
+})
 
-// const getBalance = async ({
-//     account,
-//     tokenContract,
-//     tokenSymbol
-// }) => {
-//     const [balance] = await rpc.get_currency_balance(tokenContract, account, tokenSymbol)
+interface getBalanceParams {
+    account: string,
+    tokenContract: string,
+    tokenSymbol: string
+}
+const getBalance = async (params: getBalanceParams): Promise<number> => {
+    if (!activeSession) return 0
+    const [balance] = await activeSession.client.get_currency_balance(params.tokenContract, params.account, params.tokenSymbol)
 
-//     if (balance) {
-//         return Number(balance.split(' ')[0])
-//     } else {
-//         return 0
-//     }
-// }
+    if (balance) {
+        return Number(balance.split(' ')[0])
+    } else {
+        return 0
+    }
+}
 
-const updateStatus = () => {
+    
 
-    if (session && session.auth) {
-        avatarName.textContent = session.auth.actor.toString()
-        // fromInput.value = session.auth.actor.toString()
+const updateStatus = async () => {
+
+    if (activeSession && activeSession.auth) {
+        
+        let balance = await getBalance({account, tokenContract, tokenSymbol})
+        .then(res => {
+            return res
+        }).catch(err => console.log(err))
+        avatarName.textContent =  `${activeSession.auth.actor.toString()} (${balance} ${tokenSymbol})`
+        avatarName.style.fontSize = "1.5rem"
+        welcomeMessage.textContent = `Hey${' ' + activeSession.auth.actor.toString() || ''}, welcome to PrickTopia`
+        // fromInput.value = activeSession.auth.actor.toString()
         loginButton.style.display = "none"
         avatar.style.display = "block"
         avatarImage.style.display = "block"
@@ -59,7 +81,7 @@ const updateStatus = () => {
 updateStatus()
 
 const login = async (restoreSession: boolean) => {
-    const { link: localLink, session: localSession } = await ProtonWebSDK({
+    const { link, session } = await ProtonWebSDK({
         linkOptions: {
         endpoints,
         chainId,
@@ -84,28 +106,28 @@ const login = async (restoreSession: boolean) => {
         }
     })
 
-    link = localLink
-    session = localSession
+    activeLink = link as ProtonWebLink | Link
+    activeSession = session as LinkSession
 
     updateStatus()  
 }
 
 const logout = async () => {
-    if (link && session) {
-        await link.removeSession(appIdentifier, session.auth, chainId);
+    if (activeLink && activeSession) {
+        await activeLink.removeSession(appIdentifier, activeSession.auth, chainId);
     }
-    session = undefined;
-    link = undefined;
+    activeSession = undefined;
+    activeLink = undefined;
 
     updateStatus()
 }
 
 // const transfer = async ({ to, amount }) => {
-//     if (!session) {
+//     if (!activeSession) {
 //         throw new Error('No Session');
 //     }
 
-//     return await session.transact({
+//     return await activeSession.transact({
 //         actions: [{
 //         /**
 //          * The token contract, precision and symbol for tokens can be seen at protonscan.io/tokens
@@ -120,7 +142,7 @@ const logout = async () => {
 //         // Action parameters
 //         data: {
 //             // Sender
-//             from: session.auth.actor,
+//             from: activeSession.auth.actor,
 
 //             // Receiver
 //             to: to,
@@ -131,7 +153,7 @@ const logout = async () => {
 //             // Optional memo
 //             memo: ""
 //         },
-//         authorization: [session.auth]
+//         authorization: [activeSession.auth]
 //         }]
 //     }, {
 //         broadcast: true

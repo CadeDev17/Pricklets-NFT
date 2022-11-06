@@ -21,7 +21,7 @@ const lightGreen = #52ab98 | Hovers and Buttons
 }
 
 nav {
-    background: #ffffff;
+    background: #f2f2f2;
     height: 100px;
     width: 100%;
     line-height:50px;
@@ -42,8 +42,8 @@ nav {
     border-radius: 30px;
 }
 
-.logo-name{
-    padding-bottom: 30px;
+.user-container span{
+    margin-left: 15px;
 }
 
 
@@ -61,6 +61,8 @@ nav {
 
 .user-container a {
     margin: 0 100px;
+    text-decoration: none;
+    color: black
 }
 
 .user-container a:hover,
@@ -72,11 +74,257 @@ nav {
 /* HOME SECTION */
 
 #home-container {
-    border: 2px solid red;
     height: 89vh;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+}
+
+.btn {
+    position: absolute;
+    font-size: 3rem;
+    bottom: 40%;
+    right: 3%;
+    border: 1px solid #52ab98;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #f2f2f2
+}
+
+.egg {
+    position: absolute;
+    width: 70px;
+    bottom: 70%;
+    right: 95%;
+    transform: rotate(-20deg);
+}
+.egg1 {
+    position: absolute;
+    width: 70px;
+    bottom: 25%;
+    right: 95%;
+    transform: rotate(30deg);
+}
+.egg2 {
+    position: absolute;
+    width: 70px;
+    bottom: 15%;
+    right: 48%;
+    transform: rotate(-25deg);
+}
+.egg3 {
+    position: absolute;
+    width: 50px;
+    bottom: 80%;
+    right: 55%;
+    transform: rotate(60deg);
+}
+.egg4 {
+    position: absolute;
+    width: 70px;
+    bottom: 41%;
+    right: 65%;
+}
+
+.text-content {
+    width: 50%;
+    height: 89vh;
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
+    background-color: #2b6777;
+    color :white;
+}
+
+.home-title {
+    font-size: 7rem;
+    font-family: 'Rye', cursive;
+}
+
+.home-title span {
+    font-size: 7rem;
+    font-family: 'Rye', cursive;
+    color: #52ab98;
+}
+
+.home-desc {
+    font-size: 2rem;
+}
+
+.home-title,
+.home-desc {
+    margin-left: 3rem;
+}
+
+.image-content {
+    width: 50%;
+    height: 90vh;
+}
+.image-content img {
+    height: 89vh;
+    width: 100%
+}
+
+/* MINT STYLE SECTION */
+
+#mint-style {
+    height: 700px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+#mint-style h2 {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 4rem;
+    font-family: 'Rye', cursive;
+    border-bottom: 3px solid #52ab98;
+}
+
+#mint-style p {
+    font-size: 2rem;
+    width: 50%;
+}
+
+.list-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88%
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.process {
+    /* color: #fff; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.process div {
+    width: 500px;
+    height: 500px;
+    background-color: #52ab98;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.process .mint-list ul {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    width: 85%;
+}
+
+.process .mint-list ul li {
+    margin: 10px 0;
+}
+
+.process div h3 {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 2rem;
+    font-family: 'Rye', cursive;
+    border-bottom: 3px solid #2b6777;
+}
+
+#raffle  ul {
+    width: fit-content;
+    
+}
+
+#raffle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* ROADMAP SECTION */
+
+#roadmap .prick1 {
+    position: absolute;
+    width: 200px;
+    border-radius: 50%;
+    top:180%;
+    right: 25%;
+    transform: rotate(-25deg);
+    box-shadow: -2px 3px 5px #52ab98;
+}
+
+#roadmap .prick2 {
+    position: absolute;
+    width: 200px;
+    border-radius: 30px;
+    top:230%;
+    right: 15%;
+    transform: rotate(45deg);
+    box-shadow: -2px 3px 5px #52ab98;
+}
+
+#roadmap .prick3 {
+    position: absolute;
+    width: 200px;
+    border-radius: 50%;
+    top:220%;
+    right: 85%;
+    transform: rotate(25deg);
+    box-shadow: -2px 3px 5px #52ab98;
+}
+#roadmap .prick4 {
+    position: absolute;
+    width: 200px;
+    border-radius: 30px;
+    top:170%;
+    right: 65%;
+    transform: rotate(-10deg);
+    box-shadow: -2px 3px 5px #52ab98;
+}
+
+#roadmap {
+    height: 850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b6777;
+}
+
+
+#roadmap .roadmap-container {
+    border: 5px solid #52ab98;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    width: 35%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#roadmap h2 {
+    font-family: 'Rye', cursive;
+    font-size:4rem;
+}
+
+#roadmap li {
+    font-size: 2rem;
+    list-style:none;
+    margin: 25px 0;
+    
+}
+
+#roadmap span {
+    font-family: 'Rye', cursive;
+    color: #52ab98;
 }

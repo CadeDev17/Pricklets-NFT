@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
 
     <!-- Required for proton -->
     <script type="module" src="https://unpkg.com/@proton/web-sdk@4.1.4"></script>
@@ -21,9 +24,9 @@
             <span>Pricklets</span>
           </div>
           <div class="user-container">
-            <a id="home">Home</a>
-            <a id="mint-style">Mint Style</a>
-            <a id="roadmap">Roadmap</a>
+            <a href="#home">Home</a>
+            <a href="#mint-style-">Mint Style</a>
+            <a href="#roadmap">Roadmap</a>
           </div>
           <div>
             <div id="login-button">Login</div>
@@ -40,8 +43,80 @@
 
     <main>
       <div id="home-container">
-        <h1>Pricklets</h1>
-        <p>Proton Chicklets with a chip on their shoulder, or an egg on their head.</p>
+        <img class="egg" src="./images/egg.png"/>
+        <img class="egg1" src="./images/egg.png"/>
+        <img class="egg2" src="./images/egg.png"/>
+        <img class="egg3" src="./images/egg.png"/>
+        <img class="egg4" src="./images/egg.png"/>
+        <div class="text-content">
+          <h1 class="home-title"><span>Pr</span>icklets</h1>
+          <p class="home-desc">Proton Chicklets with a chip on their shoulder, or an egg on their head. (could go either way)</p>
+        </div>
+
+        <div class="image-content">
+          <button id="next" class="btn">></button>
+        </div>
+      </div>
+
+      <div id="mint-style">
+        <h2 id="welcome-message"></h2>
+        <div class="list-container">
+          <div class="intro">
+            <p>
+              Originally, this project was going to be on the ETH network but we crossed the road
+              to the Proton blockchain to fit our projects long-term vision. We do things a little 
+              bit differently, in a good way of course. Here's a little bit about our minting process
+            </p>
+          </div>
+          <div class="process">
+            <div>
+              <div class="mint-list">
+                <h3>The Process (trust)</h3>
+                <ul>
+                  <li>990 manually created Pricklets will be individually listed on protonmint</li>
+                  <li>After 15% of Pricklets have found homes in PrickTopia, we will begin the Prick Raffles</li>
+                  <li>You will be able to claim 1 raffle ticket for every 2 Pricklets you own. (If you have 4 Pricklets, you can claim 2 raffle tickets for each weeks raffle)</li>
+                  <li>10 raffles over 10 week. Claim your raffle tickets each week on the website to have a chance to win a free 1/1 Pricklet and up to $1250</li>
+                </ul>
+              </div>
+              <div id="raffle">
+                <ul>
+                  <li>Week 1 raffle - $125</li>
+                  <li>Week 2 raffle - $250</li>
+                  <li>Week 3 raffle - $375</li>
+                  <li>Week 4 raffle - $500</li>
+                  <li>Week 5 raffle - $625</li>
+                </ul>
+                <ul>
+                  <li>Week 6 raffle - $750</li>
+                  <li>Week 7 raffle - $875</li>
+                  <li>Week 8 raffle - $1000</li>
+                  <li>Week 9 raffle - $1125</li>
+                  <li>Week 10 raffle - $1250</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="roadmap">
+        <img class="prick1" src="./images/Cowboy.png" />
+        <img class="prick2" src="./images/MartialArts!.png" />
+        <img class="prick3" src="./images/SleepingZombie.png" />
+        <img class="prick4" src="./images/Vandal.png" />
+        <div class="roadmap-container">
+          <h2><span>Pr</span>oadmap:</h2>
+          <ul>
+            <li>Create Twitter and build social media community</li>
+            <li>Collaborate with other successful Proton blockchain projects</li>
+            <li>Release 25 Pricklets into PrickTopia per day</li>
+            <li>Discord opening at 1000 twitter followers</li>
+            <li>Begin weekly raffle giveaways after 15% sold</li>
+            <li>Merch giveaways</li>
+            <li>Pricklet staking for PEGGS</li>
+          </ul>
+        </div>
       </div>
     </main>
 
