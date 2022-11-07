@@ -26,7 +26,7 @@ nav {
     width: 100%;
     line-height:50px;
     position: fixed;
-    border-bottom: 5px solid #f2f2f2;
+    border-bottom: 5px solid #52ab98;
     font-size: 2.2rem;
     display: flex;
     justify-content: space-between;
@@ -72,9 +72,15 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    #wrapper a {
+    main {
+        overflow-x: hidden;
+    }
+    #wrapper nav {
+        width: 100vw;
+        font-size: 1rem;
+    }
+    #wrapper nav a {
         display: none;
-        border: 2px solid red;
     }
 }
 
@@ -189,6 +195,96 @@ nav {
     width: 100%
 }
 
+@media screen and (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+    .btn {
+        position: absolute;
+        font-size: 3rem;
+        bottom: 60%;
+        right: 3%;
+        border: 1px solid #52ab98;
+        border-radius: 20px;
+    }
+
+    #home-container {
+        flex-direction: column;
+    }
+
+    .text-content {
+        width: 100%;
+    }
+
+    #image-content {
+        order: -1;
+        width: 100%;
+    }
+
+    #image-content #img {
+        height: 100%;
+    }
+
+    .home-title,
+    .home-title span {
+        font-size: 3rem;
+    }
+
+    .egg {
+        position: absolute;
+        width: 70px;
+        bottom: 40%;
+        right: 75%;
+        transform: rotate(-20deg);
+    }
+    .egg1 {
+        position: absolute;
+        width: 70px;
+        bottom: 3%;
+        right: 80%;
+        transform: rotate(30deg);
+    }
+    .egg2 {
+        position: absolute;
+        width: 65px;
+        bottom: 14%;
+        right: 41%;
+        transform: rotate(-25deg);
+    }
+    .egg3 {
+        position: absolute;
+        width: 50px;
+        bottom: 80%;
+        right: 65%;
+        transform: rotate(30deg);
+    }
+    .egg4 {
+        position: absolute;
+        width: 70px;
+        bottom: 3%;
+        right: 15%;
+    }
+    .egg5 {
+        position: absolute;
+        width: 70px;
+        bottom: 71%;
+        right: 10%;
+        transform: rotate(-30deg);
+    }
+    .egg6 {
+        position: absolute;
+        width: 70px;
+        bottom: 30%;
+        right: 5%;
+        transform: rotate(50deg);
+    }
+
+
+
+
+
+}
+
 /* MINT STYLE SECTION */
 
 #mint-style {
@@ -272,6 +368,35 @@ nav {
     margin-top: 20px;
 }
 
+@media screen and (max-width: 600px) {
+
+    .list-container {
+        flex-direction: column;
+    }
+
+    #mint-style #welcome-message {
+        font-size: 1rem;
+    }
+
+    #mint-style .intro-text {
+        font-size: 1.2rem;
+        width: 90vw;
+        margin: 20px 0;
+    }
+
+    .list-container .intro {
+        width: 100%;
+    }
+
+    .process div {
+        width: 90vw
+    }
+
+    .process #raffle ul {
+        margin-bottom: 10px;
+    }
+}
+
 /* ROADMAP SECTION */
 
 #roadmap .prick1 {
@@ -352,6 +477,63 @@ nav {
     color: #52ab98;
 }
 
+@media screen and (max-width: 600px) {
+
+    #roadmap .roadmap-container {
+        width: 90vw;
+    }
+
+    #roadmap .proadmap {
+        font-size: 3rem;
+        border-bottom: 2px solid #52ab98;
+    }
+
+    #roadmap .proadmap-list {
+        font-size: 2rem;
+        text-align: center;
+        margin-right: 40px;
+    }
+
+    #roadmap .prick1 {
+        position: absolute;
+        width: 100px;
+        border-radius: 50%;
+        top:174%;
+        right: 3%;
+        transform: rotate(-25deg);
+        box-shadow: -2px 3px 5px #52ab98;
+    }
+    
+    #roadmap .prick2 {
+        position: absolute;
+        width: 95px;
+        border-radius: 30px;
+        top:223%;
+        right: 3%;
+        transform: rotate(20deg);
+        box-shadow: -2px 3px 5px #52ab98;
+    }
+    
+    #roadmap .prick3 {
+        position: absolute;
+        width: 100px;
+        border-radius: 50%;
+        top:250%;
+        right: 75%;
+        transform: rotate(-25deg);
+        box-shadow: -2px 3px 5px #52ab98;
+    }
+    #roadmap .prick4 {
+        position: absolute;
+        width: 100px;
+        border-radius: 30px;
+        top:196%;
+        right: 77%;
+        transform: rotate(10deg);
+        box-shadow: -2px 3px 5px #52ab98;
+    }
+}
+
 /* RAFFLE SECTION */
 #raffle-section {
     height: 150px;
@@ -381,6 +563,24 @@ nav {
 
 .raffle-form div {
     margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #raffle-section {
+        flex-direction: column;
+    }
+
+    .raffle-form {
+        font-size: 1rem;
+    }
+
+    .raffle-form button {
+        margin: 20px 5px 0 0;
+    }
+
+    #raffle-title {
+        font-size: 2rem;
+    }
 }
 
 
@@ -433,9 +633,27 @@ nav {
 }
 
 .you-img {
-    width: 275px;
+    width: 300px;
     border-radius: 25%;
     padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #team {
+        flex-direction: column;
+        height: fit-content;
+    }
+    .me-img {
+        width: 125px;
+    }
+
+    .you-img {
+        width: 130px;
+    }
+
+    .me-container h2 {
+        font-size: 2rem;
+    }
 }
 
 /* FOOTER SECTION */
@@ -465,6 +683,17 @@ nav {
 
 #footer div span {
     color: #52ab98
+}
+
+@media screen and (max-width: 600px) {
+    #footer div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 2rem;
+        font-family: 'Rye', cursive;
+        margin: auto 10px;
+    }
 }
 
 

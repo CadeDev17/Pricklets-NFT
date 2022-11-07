@@ -37,9 +37,7 @@ imgCarouselBtn.addEventListener('click', event => {
     if (count === images.length) {
         count = 0
     }
-    console.log(img)
     img.src = images[count]
-    console.log(img)
 })
 
 interface getBalanceParams {

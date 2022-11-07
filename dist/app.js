@@ -43,9 +43,7 @@ imgCarouselBtn.addEventListener('click', event => {
     if (count === images.length) {
         count = 0;
     }
-    console.log(img);
     img.src = images[count];
-    console.log(img);
 });
 const getBalance = (params) => __awaiter(void 0, void 0, void 0, function* () {
     if (!activeSession)

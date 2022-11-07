@@ -1,6 +1,7 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pricklets</title>
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="./style.css" />
@@ -27,13 +28,13 @@
             <a href="#home-container">Home</a>
             <a href="#mint-style">Mint Style</a>
             <a href="#roadmap">Roadmap</a>
-            <a href="#raffle-section">Raffle Check-in</a>
+            <a href="#raffle-section">Raffle Claim</a>
           </div>
           <div>
-            <div id="login-button">Login</div>
-        
-            <div id="avatar"></div>
             <div class="user-container">
+              <div id="login-button">Login</div>
+              <div id="avatar"></div>
+              
               <img id="avatar-image" src="https://bloks.io/img/proton_avatar.png" alt="Profile Photo"/>
               <span id="avatar-name"></span>
               <i id="logout" class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>
@@ -66,7 +67,7 @@
         <h2 id="welcome-message"></h2>
         <div class="list-container">
           <div class="intro">
-            <p>
+            <p class="intro-text">
               Originally, this project was going to be on the ETH network but we crossed the road
               to the Proton blockchain to fit our projects long-term vision. We do things a little 
               bit differently, in a good way of course. Here's a little bit about our minting process
@@ -110,8 +111,8 @@
         <img class="prick3" src="./images/SleepingZombie.png" />
         <img class="prick4" src="./images/Vandal.png" />
         <div class="roadmap-container">
-          <h2><span>Pr</span>oadmap:</h2>
-          <ul>
+          <h2 class="proadmap"><span>Pr</span>oadmap:</h2>
+          <ul class="proadmap-list">
             <li>Create Twitter and build social media community</li>
             <li>Collaborate with other successful Proton blockchain projects</li>
             <li>Release 25 Pricklets into PrickTopia per day</li>
@@ -125,7 +126,7 @@
       
       <div id="raffle-section">
         <div>
-          <h2>Weekly Raffle Check-in</h2>
+          <h2 id="raffle-title">Weekly Raffle Claim</h2>
         </div>
         <div>
           <form class="raffle-form">
