@@ -18,7 +18,7 @@
 
   <body>
     <div id="wrapper">
-        <nav class="fixed">
+        <nav>
           <div class="user-container">
             <img class="logo" src="./images/prickletfarmer.png" alt="pricklet farmer">
             <span>Pricklets</span>
@@ -27,6 +27,7 @@
             <a href="#home-container">Home</a>
             <a href="#mint-style">Mint Style</a>
             <a href="#roadmap">Roadmap</a>
+            <a href="#raffle-section">Raffle Check-in</a>
           </div>
           <div>
             <div id="login-button">Login</div>
@@ -48,6 +49,8 @@
         <img class="egg2" src="./images/egg.png"/>
         <img class="egg3" src="./images/egg.png"/>
         <img class="egg4" src="./images/egg.png"/>
+        <img class="egg5" src="./images/egg.png"/>
+        <img class="egg6" src="./images/egg.png"/>
         <div class="text-content">
           <h1 class="home-title"><span>Pr</span>icklets</h1>
           <p class="home-desc">Proton Chicklets with a chip on their shoulder, or an egg on their head. (could go either way)</p>
@@ -119,6 +122,25 @@
           </ul>
         </div>
       </div>
+      
+      <div id="raffle-section">
+        <div>
+          <h2>Weekly Raffle Check-in</h2>
+        </div>
+        <div>
+          <form class="raffle-form">
+            <div>
+              <label for="proton-username">Proton Username:</label>
+              <input name="proton-username" id="proton-username" type="text" disabled="true" placeholder="Your Proton Username" />
+            </div>
+            <div>
+              <label for="raffle-tickets">Available Raffle Tickets:</label>
+              <input name="raffle-tickets" id="raffle-tickets" type="text" disabled="true" placeholder="Your Available Raffle Tickets" />
+            </div>
+            <button disabled="true">CLAIM TICKETS</button>
+          </form>
+        </div>
+      </div>
 
       <div id="team">
         <div class="me-container">
@@ -126,8 +148,9 @@
           <h2>Me</h2>
           <span>Full Stack Web2/Web3 Dev, Project Manager, ex-BAYC dev</span>
           <p>
-            I am the founder of Pricklets, I am learning TypeScript and also wanting to build a project on the Proton blockchain.
-            What a perfect coincidence that the Proton chain integrates TS, the result? Pricklets.
+            Spent a long time in this space and haven't seen anything like the payment capabilities
+            of the proton blockchain and had to learn how to build with it. I love to build cool shit with
+            new technologies, join us and we will build cool shit together.
           </p>
         </div>
 

@@ -11,7 +11,7 @@ const tokenSymbol = 'XPR'
 const appIdentifier = "taskly"
 const chainId = "384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0"
 const endpoints = ["https://api.protonnz.com"]
-const images = ['/MartialArts!.0bd9e1df.png', '/prickletfarmer.67526240.png', '/SleepingZombie.996fbeca.png', '/Vandal.e2c4911b.png']
+const images = ['/MartialArts!.0bd9e1df.png', '/Cowboy.1b74f804.png', '/SleepingZombie.996fbeca.png', '/Vandal.e2c4911b.png']
 
 
 const img = document.querySelector('#img') as HTMLImageElement
