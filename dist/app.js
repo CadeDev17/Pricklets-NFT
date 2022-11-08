@@ -21,7 +21,11 @@ const tokenSymbol = 'XPR';
 const appIdentifier = "taskly";
 const chainId = "384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0";
 const endpoints = ["https://api.protonnz.com"];
-const images = ['/MartialArts!.0bd9e1df.png', '/Cowboy.1b74f804.png', '/SleepingZombie.996fbeca.png', '/Vandal.e2c4911b.png'];
+const images = [
+    '/MartialArts!.0bd9e1df.png', '/Cowboy.1b74f804.png', '/SleepingZombie.996fbeca.png',
+    '/Vandal.e2c4911b.png', '/Chef.2d208378.png', '/Mythic.688f78b0.png', '/Rare.53410e20.png',
+    '/Roman.772f4c56.png'
+];
 const img = document.querySelector('#img');
 const imgCarouselBtn = document.querySelector('#next');
 const imgContent = document.querySelector('#image-content');

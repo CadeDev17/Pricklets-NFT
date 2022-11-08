@@ -321,6 +321,17 @@ nav {
     width: 50%;
 }
 
+.link {
+    text-decoration: none;
+    color: #2b6777;
+
+}
+
+.link:hover {
+    color: white;
+    cursor: pointer;
+}
+
 .process {
     /* color: #fff; */
     width: 50%;
@@ -381,7 +392,7 @@ nav {
     #mint-style .intro-text {
         font-size: 1.2rem;
         width: 90vw;
-        margin: 20px 0;
+        margin: 20px 0 20px 15px;
     }
 
     .list-container .intro {
@@ -648,7 +659,7 @@ nav {
     }
 
     .you-img {
-        width: 130px;
+        width: 180px;
     }
 
     .me-container h2 {
@@ -683,6 +694,10 @@ nav {
 
 #footer div span {
     color: #52ab98
+}
+.socials:hover {
+    color: #52ab98;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
