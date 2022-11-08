@@ -41,13 +41,15 @@ const logoutIcon = document.querySelector('#logout');
 // const transferButton = document.querySelector('#transfer-button') as HTMLElement
 // if images length is equal to the current count, current count goes back to 0
 // on click count will increment one, starting at the first index of images array 0
-let count = 1;
+let count = 0;
 imgCarouselBtn.addEventListener('click', event => {
-    count++;
     if (count === images.length) {
         count = 0;
     }
-    img.src = images[count];
+    else {
+        count++;
+        img.src = images[count];
+    }
 });
 const getBalance = (params) => __awaiter(void 0, void 0, void 0, function* () {
     if (!activeSession)
